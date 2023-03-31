@@ -6,9 +6,9 @@
     /creatures?creatureFilter=[whatever the user typed into form]
  -->
 
-<form method="GET" action="/creatures">
+<form method="GET" action="/prehistoric_creatures">
     <label for="creatureSearch">Search:</label>
-    <input type="text" name="creatureFilter" id="" placeholder="search creature name...">
+    <input type="text" name="creatureFilter" id="" placeholder="search creature type...">
 
     <button type="submit">Search</button>
 </form>
@@ -16,7 +16,7 @@
 <ul>
     <% creatures.forEach((creature, i) => { %>
         <li>
-            <%= creature.type %> looks like <img href="<%=creature.img_url%>" /><a class="more-info" href="/controllers/creatures/<%= i %>">...more info</a>
+            <%= creature.type %> looks like <img src="<%=creature.img_url%>" /><a class="more-info" href="/creatures/prehistoric_creatures/<%= i %>">...more info</a>
         </li>
     <% }) %>
 </ul>
