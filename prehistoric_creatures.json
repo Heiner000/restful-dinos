@@ -1,1 +1,26 @@
-[{"type":"giant beaver","img_url":"http://www.beringia.com/sites/default/files/Giant-Beaver-banner.jpg"},{"type":"mastodon","img_url":"https://cdn-images-1.medium.com/max/1200/1*a2VvYsKGApR-E1SnT5O7yQ.jpeg"},{"type":"saber-toothed salmon","img_url":"https://cottagelife.com/wp-content/uploads/2014/11/Oncorhynchus_rastrosus.jpg"},{"type":"megalonyx","img_url":"https://animalgeography.files.wordpress.com/2018/08/sloth-banner-e1535192925361.jpg?w=584&h=325"},{"type":"sabertooth","img_url":"https://th.bing.com/th/id/R.cc36e6303fc74274db5343fdd81f2e6b?rik=yM95ZkdAZww1xg&riu=http%3a%2f%2figs.indiana.edu%2fimages%2ffossilsandtime%2fsabertooth.jpg&ehk=KKRcjjzDi8IW%2bxsGddIKTWcraC5u4xCKtEeXOK4HLN4%3d&risl=&pid=ImgRaw&r=0"},{"type":"sabertooth","img_url":"https://th.bing.com/th/id/R.cc36e6303fc74274db5343fdd81f2e6b?rik=yM95ZkdAZww1xg&riu=http%3a%2f%2figs.indiana.edu%2fimages%2ffossilsandtime%2fsabertooth.jpg&ehk=KKRcjjzDi8IW%2bxsGddIKTWcraC5u4xCKtEeXOK4HLN4%3d&risl=&pid=ImgRaw&r=0"},{"type":"Giant Sloth","img_url":"giant_sloth.png"}]
+[
+  {
+    "type": "giant beaver",
+    "img_url": "http://www.beringia.com/sites/default/files/Giant-Beaver-banner.jpg"
+  },
+  {
+    "type": "mastodon",
+    "img_url": "https://cdn-images-1.medium.com/max/1200/1*a2VvYsKGApR-E1SnT5O7yQ.jpeg"
+  },
+  {
+    "type": "saber-toothed salmon",
+    "img_url": "https://cottagelife.com/wp-content/uploads/2014/11/Oncorhynchus_rastrosus.jpg"
+  },
+  {
+    "type": "megalonyx",
+    "img_url": "https://animalgeography.files.wordpress.com/2018/08/sloth-banner-e1535192925361.jpg?w=584&h=325"
+  },
+  {
+    "type": "sabertooth",
+    "img_url": "sabertooth.png"
+  },
+  {
+    "type": "Giant Sloth",
+    "img_url": "giant_sloth.png"
+  }
+]

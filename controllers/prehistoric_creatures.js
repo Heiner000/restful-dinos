@@ -4,19 +4,16 @@ const router = express.Router()
 
 // helper function to read the creature db
 const readCreatures = () => {
+    // read in the creatures json
     const creatures = fs.readFileSync('./prehistoric_creatures.json')
+    // convert to POJO (plain old javascript object)
     const creatureData = JSON.parse(creatures)
     return creatureData
 }
-
-
-
-
-
 readCreatures()
 
 // GET /prehistoric_creatures -- READ displays all prehistoric creatures
-router.get('/creatures', (req, res) => {
+router.get('/', (req, res) => {
     let creatures = readCreatures()
     console.log(req.query)
 
@@ -30,14 +27,13 @@ router.get('/creatures', (req, res) => {
     })
 })
 
-
-// GET /prehistoric_creatures/new -- READ form for adding new prehistoric creatures
-router.get('/prehistoric_creatures/new', (req, res) => {
+// GET /prehistoric_creatures/new -- SHOW form for adding new prehistoric creatures
+router.get('/new', (req, res) => {
     res.render('creatures/new.ejs')
 })
 
 // POST /prehistoric_creatures -- CREATE a new creature for the db
-router.post('/prehistoric_creatures', (req, res) => {
+router.post('/', (req, res) => {
     console.log(req.body)
     const creatures = readCreatures()
 
@@ -46,11 +42,11 @@ router.post('/prehistoric_creatures', (req, res) => {
     fs.writeFileSync('./prehistoric_creatures.json', JSON.stringify(creatures))
 
 
-    res.redirect('/creatures/creatures')
+    res.redirect('/prehistoric_creatures')
 })
 
-// GET /prehistoric_creatures/:id -- READ displays a single creature @ :id
-router.get('/prehistoric_creatures/:id', (req, res) => {
+// GET /prehistoric_creatures/:id -- READ creature @ :id
+router.get('/:id', (req, res) => {
 
     const creatures = readCreatures()
     

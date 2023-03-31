@@ -1,3 +1,4 @@
+// require express and make an instance of the express router
 const express = require("express")
 const fs = require('fs')
 const router = express.Router()
@@ -15,8 +16,10 @@ const readDinos = () => {
 }
 readDinos()
 
+// mount all of our routes on the router
+
 // GET /dinosaurs -- READ return an array of dinos
-router.get('/dinosaurs', (req, res) => {
+router.get('/', (req, res) => {
     let dinos = readDinos()
     console.log(req.query)
     // if the user has searched, filter the dinos array
@@ -32,12 +35,12 @@ router.get('/dinosaurs', (req, res) => {
 })
 
 // GET /dinosaurs/new -- show route for a form that posts to POST /dinosaurs
-router.get('/dinosaurs/new', (req, res) => {
+router.get('/new', (req, res) => {
     res.render('dinos/new.ejs')
 })
 
 // POST /dinosaurs -- CREATE a new dino in the database
-router.post('/dinosaurs', (req, res) => {
+router.post('/', (req, res) => {
     console.log(req.body)   //  POST form data shows up in the req.body
     const dinos = readDinos()
     // push the dino from the req.body into the array of json dinos
@@ -46,11 +49,11 @@ router.post('/dinosaurs', (req, res) => {
     fs.writeFileSync('./dinosaurs.json', JSON.stringify(dinos))
     // tell the browser to redirect
     // do another GET request on a specific URL
-    res.redirect('/dinos/dinosaurs')
+    res.redirect('/dinosaurs')
 })
 
 // GET /dinosaurs/:id -- READ a single dino @ :id
-router.get('/dinosaurs/:id', (req, res) => {
+router.get('/:id', (req, res) => {
     // read the dino json data
     const dinos = readDinos()
     // lookup one dino using the req.params
@@ -62,4 +65,5 @@ router.get('/dinosaurs/:id', (req, res) => {
     })
 })
 
+// export the router
 module.exports = router

@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 
-<h1>Creature Search Form</h1>
+<h1>Creatures:</h1>
 
 <!-- 
     /creatures?creatureFilter=[whatever the user typed into form]
@@ -16,7 +16,7 @@
 <ul>
     <% creatures.forEach((creature, i) => { %>
         <li>
-            <%= creature.type %> looks like <img src="<%=creature.img_url%>" /><a class="more-info" href="/creatures/prehistoric_creatures/<%= i %>">...more info</a>
+            <%= creature.type %>  <a class="more-info" href="/prehistoric_creatures/<%= i %>">...more info</a>
         </li>
     <% }) %>
 </ul>
