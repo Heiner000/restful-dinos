@@ -46,7 +46,7 @@ router.post('/dinosaurs', (req, res) => {
     fs.writeFileSync('./dinosaurs.json', JSON.stringify(dinos))
     // tell the browser to redirect
     // do another GET request on a specific URL
-    res.redirect('/dinosaurs')
+    res.redirect('/dinos/dinosaurs')
 })
 
 // GET /dinosaurs/:id -- READ a single dino @ :id

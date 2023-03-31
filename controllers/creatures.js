@@ -46,7 +46,7 @@ router.post('/prehistoric_creatures', (req, res) => {
     fs.writeFileSync('./prehistoric_creatures.json', JSON.stringify(creatures))
 
 
-    res.redirect('/prehistoric_creatures')
+    res.redirect('/creatures/creatures')
 })
 
 // GET /prehistoric_creatures/:id -- READ displays a single creature @ :id
