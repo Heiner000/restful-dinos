@@ -1,9 +1,22 @@
 <%- include('../partials/header') %>
 
+<h1>Dino Search Form</h1>
+
+<!-- 
+    /dinosaurs?dinoFilter=[whatever the user typed into form]
+ -->
+
+<form method="GET" action="/dinosaurs">
+    <label for="dinoSearch">Search:</label>
+    <input type="text" name="dinoFilter" id="" placeholder="search dino name...">
+
+    <button type="submit">Search</button>
+</form>
+
 <ul>
-    <% dinos.forEach(dino => { %>
+    <% dinos.forEach((dino, i) => { %>
         <li>
-            <%= dino.name %> is a <%= dino.type %>
+            <%= dino.name %> is a <%= dino.type %> <a class="more-info" href="/dinos/dinosaurs/<%= i %>">...more info</a>
         </li>
     <% }) %>
 </ul>

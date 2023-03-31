@@ -1,0 +1,24 @@
+<%- include('../partials/header') %>
+
+<h1>Creature Search Form</h1>
+
+<!-- 
+    /creatures?creatureFilter=[whatever the user typed into form]
+ -->
+
+<form method="GET" action="/creatures">
+    <label for="creatureSearch">Search:</label>
+    <input type="text" name="creatureFilter" id="" placeholder="search creature name...">
+
+    <button type="submit">Search</button>
+</form>
+
+<ul>
+    <% creatures.forEach((creature, i) => { %>
+        <li>
+            <%= creature.type %> looks like <img href="<%=creature.img_url%>" /><a class="more-info" href="/controllers/creatures/<%= i %>">...more info</a>
+        </li>
+    <% }) %>
+</ul>
+
+<%- include('../partials/footer') %>

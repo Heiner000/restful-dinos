@@ -1,0 +1,24 @@
+<%- include('../partials/header.ejs') %>
+
+<h1>Create a new dino:</h1>
+
+<!-- 
+    this form will create an object in the request body (req.body)
+    {
+        // the keys correspond to the 'name' properties of the inputs
+        type: what the user typed in,
+        name: what the user typed in
+    }
+ -->
+
+<form method="POST" action="/dinos/dinosaurs">
+    <label for="dinoTyoe">Type:</label>
+    <input type="text" name="type" id="dinoType" placeholder="dino type...">
+    
+    <label for="dinoName">Name:</label>
+    <input type="text" name="name" id="dinoName" placeholder="dino name...">
+
+    <button type="submit">Create Dino</button>
+</form>
+
+<%- include('../partials/footer.ejs') %>
